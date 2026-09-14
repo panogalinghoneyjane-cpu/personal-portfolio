@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #1f2937;
+}
+
+
+header {
+    background-color: #173b57;
+    color: white;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+
+
+nav {
+    background-color: #0f2d42;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.4rem;
+}
+
+nav a:hover {
+    background-color: #080808;
+}
+
+nav a:focus {
+    outline: 3px solid #efefed;
+    outline-offset: 3px;
+}
+
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+
+section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #173b57;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #e1f0f7;
+    color: #173b57;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid #d1d5db;
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #173b57;
+}
+
+
+
+a {
+    color: #075985;
+}
+
+a:hover {
+    color: #0f766e;
+}
+
+a:focus {
+    outline: 3px solid #f4c95d;
+    outline-offset: 3px;
+}
+
+
+footer {
+    background-color: #173b57;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
