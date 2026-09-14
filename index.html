@@ -1,106 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+html {
+    scroll-behavior: smooth;
+}
 
-    <title>Honey Jane Panogaling | Personal Portfolio</title>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #1f2937;
+}
 
-    <meta name="description"
-        content="Personal portfolio of Honey Jane Panogaling, a Bachelor of Science in Information Technology student.">
-</head>
 
-<body>
+header {
+    background-color: #173b57;
+    color: white;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
 
-    <header>
-        <h1>Honey Jane Panogaling</h1>
-        <p>BSIT Student | Aspiring IT Professional</p>
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
 
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
 
-    <main>
 
-        <section id="about">
-            <h2>About Me</h2>
 
-            <p>
-                Hello! My name is Honey Jane Panogaling. I am a Bachelor of Science
-                in Information Technology student interested in web development,
-                databases, and information technology.
-            </p>
-        </section>
+nav {
+    background-color: #0f2d42;
+    padding: 1rem;
+}
 
-        <section id="skills">
-            <h2>Skills</h2>
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>SQL</li>
-                <li>C Programming</li>
-                <li>Database Management</li>
-            </ul>
-        </section>
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
 
-        <section id="projects">
-            <h2>Projects</h2>
+    flex-wrap: wrap;
+}
 
-            <article>
-                <h3>Personal Portfolio Website</h3>
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.4rem;
+}
 
-                <p>
-                    A simple personal portfolio website created using HTML.
-                    This project demonstrates semantic HTML structure,
-                    accessibility, and basic SEO practices.
-                </p>
-            </article>
+nav a:hover {
+    background-color: #080808;
+}
 
-            <article>
-                <h3>Digital Library Repository</h3>
+nav a:focus {
+    outline: 3px solid #efefed;
+    outline-offset: 3px;
+}
 
-                <p>
-                    A proposed role-based digital library repository designed
-                    to organize academic resources and support resource monitoring.
-                </p>
-            </article>
 
-        </section>
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
 
-        <section id="contact">
-            <h2>Contact</h2>
 
-            <p>
-                Email:
-                <a href="mailto:panogalinghoneyjane@gmail.com">
-                    panogalinghoneyjane@gmail.com
-                </a>
-            </p>
+section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
 
-            <p>
-                GitHub:
-                <a href="https://github.com/panogalinghoneyjane-cpu">
-                    GitHub Profile
-                </a>
-            </p>
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
 
-        </section>
+section h2 {
+    color: #173b57;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
 
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Honey Jane Panogaling. All rights reserved.</p>
-    </footer>
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0;
+    list-style: none;
+}
 
-</body>
+.skills-list li {
+    background-color: #e1f0f7;
+    color: #173b57;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
 
-</html>
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid #d1d5db;
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #173b57;
+}
+
+
+
+a {
+    color: #075985;
+}
+
+a:hover {
+    color: #0f766e;
+}
+
+a:focus {
+    outline: 3px solid #f4c95d;
+    outline-offset: 3px;
+}
+
+
+footer {
+    background-color: #173b57;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
